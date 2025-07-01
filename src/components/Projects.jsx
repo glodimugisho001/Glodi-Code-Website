@@ -18,28 +18,28 @@ const dataProjects = [
     {
         title: "Portfolio",
         description: "My own web portfolio site, designed to showcase my projects, skills, and experience.",
-        url: "",
+        url: "https://glodi-code.vercel.app/",
         image: portfolio,
         stack: ["React", "tailwind css", "Emailjs", "framer-motion"]
     },
     {
         title: "Todo List",
         description: "A simple todo list, with a clean and intuitive interface for managing your tasks.",
-        url:"",
+        url:"https://todolist-eta-peach.vercel.app/",
         image: todo,
         stack: ["React", "tailwind css"]
     },
     {
         title: "Unit Converter",
         description: "A versatile unit converter application that allows users to convert units of continuous quantities.",
-        url:"",
+        url:"https://convertisseur-unites-nine.vercel.app/",
         image: convertisseur,
         stack: ["React", "tailwind css"]
     },
     {
         title: "Calculator",
         description: "A simple calculator app, with an intuitive interface for basic arithmetic operations. It allows users to perform addition, subtraction, multiplication, and division operations.",
-        url:"",
+        url:"https://calculator-app-webapp.vercel.app/",
         image: calculator,
         stack: ["React", "Css"]
     }
