@@ -1,0 +1,8 @@
+:root {
+    --link-hover: #3b82f6;           /* Couleur au survol (ex: blue-500) */
+    --link-active: #1d4ed8;          /* Couleur active (ex: blue-700) */
+    --link-transition: color 0.2s all;   /* Transition pour la couleur */
+}
+html{
+    scroll-behavior: smooth;
+}
