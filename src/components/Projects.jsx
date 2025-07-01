@@ -71,9 +71,11 @@ export default function Projects() {
                                     <span key={index} className='px-2 py-1 text-[12px] dark:bg-gray-800 dark:text-gray-300 bg-gray-200 text-black rounded-full text-xs'>{stack}</span>
                                 ))}
                             </div>          
-                            <a href={project.url} target='_blank' className='flex justify-center items-center gap-2 px-3 py-1 dark:bg-blue-700 dark:hover:bg-blue-800 dark:active:bg-blue-600 w-24 bg-blue-500 text-[#F5F5F5] hover:bg-blue-800 active:to-blue-600 rounded-2xl transition-all duration-200  text-[14px]'>
-                                <Globe size={14}/>
-                                Website
+                            <a href={project.url} target='_blank' className=' rounded-2xl transition-all duration-200'>
+                                <button className='flex justify-center items-center gap-2 px-3 py-1 rounded-2xl   dark:bg-blue-700 dark:hover:bg-blue-800 dark:active:bg-blue-600 bg-blue-500 text-[#F5F5F5] hover:bg-blue-800 active:to-blue-600'>                                
+                                    <Globe size={14}/>
+                                    <span>webSite</span>
+                                </button>
                             </a>
                         </CardFooter>
                     </Card>
