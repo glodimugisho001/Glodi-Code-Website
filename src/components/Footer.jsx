@@ -9,7 +9,7 @@ export default function Footer () {
                 <div className="flex-1 pr-8">
                     <h1 className='text-2xl font-bold'>Glodi Code</h1>
                     <p className='text-[#CBD5E1] text-[16px] py-4'>
-                        A passionate Full Stack Developer specializing in building exceptional digital experiences with modern web technologies.
+                        A passionate Frontend Developer specializing in building exceptional digital experiences with modern web technologies.
                     </p>
                     <div className="flex gap-4">
                         <Github size={24} className="cursor-pointer hover:text-[var(--link-hover)] active:text-[var(--link-active)] transition-[var(--link-transition)]"/>
