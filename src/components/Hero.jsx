@@ -50,7 +50,7 @@ export default function Hero() {
                         initial={{opacity:0}}
                         animate={{opacity:1}}
                         transition={{ delay:1, duration:0.8}} href="#contact">
-                        <Button >Contact Me</Button>
+                        <Button className="dark:text-white dark:hover:text-black">Contact Me</Button>
                     </motion.a>
                     <motion.a 
                         initial={{opacity:0}}
@@ -58,7 +58,7 @@ export default function Hero() {
                         transition={{ delay:1.2, duration:0.8}} 
                         href="#contact"
                     >
-                        <Button >Contact Me</Button>
+                        <Button className="dark:text-white dark:hover:text-black">Contact Me</Button>
                     </motion.a>
                 
                 </div>
@@ -89,7 +89,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.5 }}
             >
                 <img
-                    src="https://images.pexels.com/photos/5483077/pexels-photo-5483077.jpeg" // Adjust the path as necessary
+                    src="https://avatars.githubusercontent.com/u/178777238?v=4" // Adjust the path as necessary
                     alt="Glodi's profile"
                     className="w-[250px] h-[280px] object-cover rounded-2xl"
                 />
