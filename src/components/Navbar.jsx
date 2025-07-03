@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 export default function Navbar() {
     const [MenuIsOpen, setMenuIsOpen] = useState(false)
+    const menuToggle = () => setMenuIsOpen( !MenuIsOpen)
 
     const getThemeValue = localStorage.getItem('themeValue')
     const getValueJs = JSON.parse(getThemeValue)
@@ -46,7 +47,7 @@ export default function Navbar() {
                             {isThemeDark ? <Sun /> : <Moon />}
                         </div>
                         <div className="md:hidden hover:text-[var(--link-hover)] active:text-[var(--link-active)] transition-[var(--link-transition)]"
-                            onClick={()=>{setMenuIsOpen( !MenuIsOpen)}}
+                            onClick={menuToggle}
                         >
                             {MenuIsOpen ? <X/> : <Menu />}
                         </div>
@@ -56,17 +57,17 @@ export default function Navbar() {
             <AnimatePresence>
                 {MenuIsOpen && 
                     <motion.ul 
-                        className="w-full shadow-md backdrop-blur-lg dark:bg-gray-900/80 dark:text-[#CBD5E1] absolute top-full left-0 p-4 flex flex-col gap-2"
+                        className="w-full shadow-md backdrop-blur-lg dark:bg-gray-800/80 bg-gray-200/80 dark:text-[#CBD5E1] absolute top-full left-0 p-4 flex flex-col gap-2"
                         initial={{opacity:0}}
                         animate={{opacity:1}}
                         exit={{opacity:0}}
                         transition={ {duration:0.5}}
                     >
-                        <li><a href="#acceuil" className=' dark:hover:text-[var(--link-hover)] dark:active:text-[var(--link-active)] transition-[var(--link-transition)] hover:text-blue-700 active:text-blue-700'>Home</a></li>
-                        <li><a href="#about" className=' dark:hover:text-[var(--link-hover)] dark:active:text-[var(--link-active)] transition-[var(--link-transition)] hover:text-blue-700 active:text-blue-700'>About</a></li>
-                        <li><a href="#skills" className='dark:hover:text-[var(--link-hover)] dark:active:text-[var(--link-active)] transition-[var(--link-transition)] hover:text-blue-700 active:text-blue-700'>Skills</a></li>
-                        <li><a href="#project" className=' dark:hover:text-[var(--link-hover)] dark:active:text-[var(--link-active)] transition-[var(--link-transition)] hover:text-blue-700 active:text-blue-700 ' >Projects</a></li>
-                        <li><a href="#contact" className='dark:hover:text-[var(--link-hover)] dark:active:text-[var(--link-active)] transition-[var(--link-transition)] hover:text-blue-700 active:text-blue-700 '>Contact</a></li>   
+                        <li><a onClick={menuToggle} href="#acceuil" className=' dark:hover:text-[var(--link-hover)] dark:active:text-[var(--link-active)] transition-[var(--link-transition)] hover:text-blue-700 active:text-blue-700'>Home</a></li>
+                        <li><a onClick={menuToggle} href="#about" className=' dark:hover:text-[var(--link-hover)] dark:active:text-[var(--link-active)] transition-[var(--link-transition)] hover:text-blue-700 active:text-blue-700'>About</a></li>
+                        <li><a onClick={menuToggle} href="#skills" className='dark:hover:text-[var(--link-hover)] dark:active:text-[var(--link-active)] transition-[var(--link-transition)] hover:text-blue-700 active:text-blue-700'>Skills</a></li>
+                        <li><a onClick={menuToggle} href="#project" className=' dark:hover:text-[var(--link-hover)] dark:active:text-[var(--link-active)] transition-[var(--link-transition)] hover:text-blue-700 active:text-blue-700 ' >Projects</a></li>
+                        <li><a onClick={menuToggle} href="#contact" className='dark:hover:text-[var(--link-hover)] dark:active:text-[var(--link-active)] transition-[var(--link-transition)] hover:text-blue-700 active:text-blue-700 '>Contact</a></li>   
                     </motion.ul>
                 }
             </AnimatePresence>
