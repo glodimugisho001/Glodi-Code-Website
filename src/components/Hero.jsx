@@ -58,7 +58,7 @@ export default function Hero() {
                         transition={{ delay:1.2, duration:0.8}} 
                         href="#contact"
                     >
-                        <Button className="dark:text-white dark:hover:text-black">Contact Me</Button>
+                        <Button className="dark:text-white dark:hover:text-black">View My Work</Button>
                     </motion.a>
                 
                 </div>
