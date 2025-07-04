@@ -27,7 +27,7 @@ export default function Hero() {
                         animate={{opacity:1}}
                         transition={{ delay:0.4, duration:0.8}} className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 "
                     >
-                        Glodi
+                        Glodi Mugisho
                     </motion.span>
                     <motion.span 
                         initial={{opacity:0}}
@@ -76,10 +76,7 @@ export default function Hero() {
                     </a>
                     <a href="https://x.com/GlodiMugisho">
                         <Twitter size={24} className="cursor-pointer hover:text-[var(--link-hover)] active:text-[var(--link-active)] transition-[var(--link-transition)]" />
-                    </a>
-                    <a href="https://www.instagram.com/glodi_mugisho/">
-                        <Instagram size={24} className="cursor-pointer hover:text-[var(--link-hover)] active:text-[var(--link-active)] transition-[var(--link-transition)]" />
-                    </a>   
+                    </a>  
                 </motion.div>
             </motion.div>
             <motion.div 

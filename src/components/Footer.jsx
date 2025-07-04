@@ -15,7 +15,6 @@ export default function Footer () {
                         <Github size={24} className="cursor-pointer hover:text-[var(--link-hover)] active:text-[var(--link-active)] transition-[var(--link-transition)]"/>
                         <Linkedin size={24} className="cursor-pointer hover:text-[var(--link-hover)] active:text-[var(--link-active)] transition-[var(--link-transition)]" />
                         <Twitter size={24} className="cursor-pointer hover:text-[var(--link-hover)] active:text-[var(--link-active)] transition-[var(--link-transition)]" />
-                        <Instagram size={24} className="cursor-pointer hover:text-[var(--link-hover)] active:text-[var(--link-active)] transition-[var(--link-transition)]" />
                     </div>
                 </div>
                 <div className="flex-1 flex gap-6 flex-col md:flex-row">

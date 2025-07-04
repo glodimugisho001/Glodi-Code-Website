@@ -7,18 +7,9 @@ const dataAbout = [
         description: "I have 1 year of experience in web development, mainly self-taught and through personal projects. I am passionate about continuous learning and creating innovative solutions."
     },
     {
-        title: "Professional Background",
-        description: "1 year of solo web development experience, I am focused on improving my skills and working on personal projects."
-    },
-    {
         title: "Education",
         description: "High school diploma in electronics. Currently a university student in Computer Engineering."
-    },
-    {
-        title: "Location",
-        description: "Goma, DRC. Available for remote collaborations and motivated to learn more."
     }
-
 ]
 export default function About () {
     const [isPhone, setIsPhone]=useState(false)
