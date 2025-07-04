@@ -8,7 +8,7 @@ const dataAbout = [
     },
     {
         title: "Professional Background",
-        description: "1 year of solo web development experience, with no professional assignments yet. I am focused on improving my skills and working on personal projects."
+        description: "1 year of solo web development experience, I am focused on improving my skills and working on personal projects."
     },
     {
         title: "Education",
