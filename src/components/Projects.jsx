@@ -12,6 +12,7 @@ import convertisseur from '../assets/unit-converter.png'
 import calculator from "../assets/calculatorApp.png"
 import todo from "../assets/todolistApp.png"
 import portfolio from "../assets/portfolio-glodi.png"
+import LittleLemon from "../assets/littleLemon.png"
 
 
 const dataProjects = [
@@ -21,6 +22,13 @@ const dataProjects = [
         url: "https://glodi-code.vercel.app/",
         image: portfolio,
         stack: ["React", "tailwind css", "Emailjs", "framer-motion"]
+    },
+    {
+        title: "Little Lemon Booking table",
+        description: "App for helping people to booking a table",
+        url: "",
+        image: LittleLemon,
+        stack: ["React", "Css"]
     },
     {
         title: "Todo List",
@@ -56,7 +64,7 @@ export default function Projects() {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center items-center md:p-4 lg:p-0 mt-10'>
                 {dataProjects.map((project, index) => (
-                    <Card key={index} className="  dark:bg-gray-900 dark:text-whitebg-[#F5F5F5] text-[#1A1A1A] py-0 pb-6 hover:translate-y-1.5 transition-transform  cursor-pointer">
+                    <Card key={index} className="h-[415px]   dark:bg-gray-900 dark:text-whitebg-[#F5F5F5] text-[#1A1A1A] py-0 pb-6 hover:translate-y-1.5 transition-transform  cursor-pointer">
                         <CardContent className="px-0 overflow-hidden relative rounded-t-lg">
                             <a href={project.url} target="_blank"><img src={project.image} alt={project.title} className="w-full h-48 mb-4 object-cover  object-center transition-transform duration-500 hover:scale-110" /></a>
                             {/* <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div> */}
