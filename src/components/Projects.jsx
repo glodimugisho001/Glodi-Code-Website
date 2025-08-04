@@ -26,7 +26,7 @@ const dataProjects = [
     {
         title: "Little Lemon Booking table",
         description: "App for helping people to booking a table",
-        url: "",
+        url: "https://little-lemon-app-teal.vercel.app/",
         image: LittleLemon,
         stack: ["React", "Css"]
     },
