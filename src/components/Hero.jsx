@@ -2,6 +2,7 @@ import React from "react";
 import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion";
+import glodi from '../assets/profile.jpg'
 
 export default function Hero() {
   return (
@@ -86,7 +87,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.5 }}
             >
                 <img
-                    src="https://avatars.githubusercontent.com/u/178777238?v=4" // Adjust the path as necessary
+                    src={glodi} // Adjust the path as necessary
                     alt="Glodi's profile"
                     className="w-[250px] h-[280px] object-cover rounded-2xl"
                 />
