@@ -78,7 +78,7 @@ export default function Hero() {
                         <Twitter size={24} className="cursor-pointer hover:text-[var(--link-hover)] active:text-[var(--link-active)] transition-[var(--link-transition)]" />
                     </a>  
                 </motion.div>
-            </motion.div>ù$$
+            </motion.div>
             <motion.div 
                 className=""
                 initial={{ opacity: 0, x: 40 }}
