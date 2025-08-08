@@ -56,7 +56,7 @@ export default function Hero() {
                         initial={{opacity:0}}
                         animate={{opacity:1}}
                         transition={{ delay:1.2, duration:0.8}} 
-                        href="#contact"
+                        href="#project"
                     >
                         <Button className="dark:text-white dark:hover:text-black">View My Work</Button>
                     </motion.a>
@@ -71,14 +71,14 @@ export default function Hero() {
                     <a href="https://github.com/glodimugisho001">
                         <Github size={24} className="cursor-pointer hover:text-[var(--link-hover)] active:text-[var(--link-active)] transition-[var(--link-transition)]"/>
                     </a>
-                    <a href="https://www.linkedin.com/in/glodi-mugisho-877b74317/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3Bca%2Bdpju4TxWSoc7BbmtDhA%3D%3D">
+                    <a href="https://www.linkedin.com/in/glodi-code?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
                         <Linkedin size={24} className="cursor-pointer hover:text-[var(--link-hover)] active:text-[var(--link-active)] transition-[var(--link-transition)]" />
                     </a>
                     <a href="https://x.com/GlodiMugisho">
                         <Twitter size={24} className="cursor-pointer hover:text-[var(--link-hover)] active:text-[var(--link-active)] transition-[var(--link-transition)]" />
                     </a>  
                 </motion.div>
-            </motion.div>
+            </motion.div>ù$$
             <motion.div 
                 className=""
                 initial={{ opacity: 0, x: 40 }}
