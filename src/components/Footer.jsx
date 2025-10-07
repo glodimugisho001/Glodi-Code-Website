@@ -7,7 +7,7 @@ export default function Footer () {
         <div className='md:w-full'>
             <div className='flex gap-6 md:gap-0 flex-col md:flex-row mb-16'>
                 <div className="flex-1 pr-8">
-                    <h1 className='text-2xl font-bold'>Glodi Code</h1>
+                    <h1 className='text-2xl font-bold' translate='no'>Glodi Code</h1>
                     <p className='text-[#CBD5E1] text-[16px] py-4'>
                         A passionate Frontend Developer specializing in building exceptional digital experiences with modern web technologies.
                     </p>

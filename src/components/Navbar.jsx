@@ -1,6 +1,7 @@
+/* eslint-disable no-unused-vars */
 import React, {useEffect, useState} from 'react'
 import { Menu, X, Sun, Moon } from "lucide-react";
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion} from 'framer-motion';
 
 
 export default function Navbar() {
@@ -31,7 +32,7 @@ export default function Navbar() {
     <>
         <div className="relative inset-0 md:max-w-[1000px] md:mx-auto px-4 md:px-6 lg:px-0">
             <div className="flex items-center py-6 justify-between text-2xl">
-                <h1 className='font-bold'><a href="#acceuil">Glodi<span className='text-blue-700'>Code.</span></a></h1>
+                <h1 className='font-bold' translate='no'><a href="#acceuil">Glodi<span className='text-blue-700'>Code.</span></a></h1>
                 <div className='flex gap-8 dark:text-[#CBD5E1] text-[#1A1A1A] '>
                     <nav className="md:flex hidden">
                         <ul className='flex gap-4'>

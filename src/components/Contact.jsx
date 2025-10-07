@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import {useForm} from "react-hook-form";
@@ -237,7 +238,6 @@ function ContactFrom({isPhone, aimatePhoneInitial, aimatePhonefinal, aimateDeskt
         type="submit" 
         value="send message" 
         className="bg-blue-600 hover:bg-blue-700 active:bg-blue-900 cursor-pointer text-white p-2 rounded-md transition-colors duration-200 w-full">
-        
         {IsLoading ? (
           <LoaderCircle size={24} className='animate-spin w-full flex justify-center items-center'/>
           ) : (
