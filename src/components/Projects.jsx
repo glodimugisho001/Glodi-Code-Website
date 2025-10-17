@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card"
 import { Globe } from 'lucide-react'
 import convertisseur from '../assets/unit-converter.png'
-import calculator from "../assets/calculatorApp.png"
+import Blog from "../assets/ReactBlog.png"
 import todo from "../assets/todolistApp.png"
 import portfolio from "../assets/portfolio-glodi.png"
 import LittleLemon from "../assets/littleLemon.png"
@@ -32,11 +32,18 @@ const dataProjects = [
         stack: ["React", "Css"]
     },
     {
+        title: "React Blog",
+        description: "A modern and minimalist blog designed for effortless publishing and reading, with a smooth and elegant interface.",
+        url: "https://mon-blog-teal.vercel.app/",
+        image: Blog,
+        stack: ["Next", "Ts", "Tailwind CSS", "Motion"]
+    },
+    {
         title: "Quiz React",
-        description: "Une application de quiz sur l'écosystème  React.",
+        description: "A simple quiz app, with a clean and intuitive interface for managing your tasks.",
         url: "https://quiz-react-one-wine.vercel.app/",
         image: quireact,
-        stack: ["React", "Tailwind Css"]
+        stack: ["React", "Tailwind Css",]
     },
     {
         title: "Todo List",
@@ -51,13 +58,6 @@ const dataProjects = [
         url:"https://convertisseur-unites-nine.vercel.app/",
         image: convertisseur,
         stack: ["React", "Tailwind Css"]
-    },
-    {
-        title: "Calculator",
-        description: "A simple calculator app, with an intuitive interface for basic arithmetic operations. It allows users to perform addition, subtraction, multiplication, and division operations.",
-        url:"https://calculator-app-webapp.vercel.app/",
-        image: calculator,
-        stack: ["React", "Css"]
     }
 ]
 

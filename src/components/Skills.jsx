@@ -1,10 +1,19 @@
-import React,{useEffect, useState} from 'react'
-import {motion} from 'framer-motion'
+/* eslint-disable no-unused-vars */
+import React,{ useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 
 const dataSkills = [
     {
         title: "React",
         image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    },
+    {
+        title: "Next.js",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    },
+    {
+        title: "TypeScript",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
     },
     {
         title: "JavaScript",
@@ -19,6 +28,7 @@ const dataSkills = [
         image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
     }
 ]
+
 
 
 
@@ -78,7 +88,7 @@ export default function Skills() {
         >
           <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Additional Skills</h3>
           <div className="flex flex-wrap justify-center gap-3">
-            {['UI/UX Design', " Git and Github ", 'Responsive Design', 'Testing (Jest)'].map((skill) => (
+            {["Api Route", "zod", 'UI/UX Design', " Git and Github ", 'Responsive Design', 'Testing (Jest)'].map((skill) => (
               <span 
                 key={skill} 
                 className="px-4 py-2 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 rounded-full text-sm shadow-sm"
