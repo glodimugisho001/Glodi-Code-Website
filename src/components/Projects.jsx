@@ -34,7 +34,7 @@ const dataProjects = [
     {
         title: "React Blog",
         description: "A modern and minimalist blog designed for effortless publishing and reading, with a smooth and elegant interface.",
-        url: "https://mon-blog-teal.vercel.app/",
+        url: "https://glodi-blog-dev.vercel.app/",
         image: Blog,
         stack: ["Next", "Ts", "Tailwind CSS", "Motion"]
     },
