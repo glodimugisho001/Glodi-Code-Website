@@ -37,7 +37,7 @@ export default function Skills() {
 
     useEffect(()=>{
         function handleResize(){
-            setIsPhone( window.innerWidth < 768 )
+            setIsPhone( window.innerWidth < 500 )
         }
         handleResize()
         window.addEventListener('resize', handleResize)
@@ -69,7 +69,7 @@ export default function Skills() {
             {dataSkills.map((item, index) => (
                 <motion.div 
                     key={index} 
-                    className="w-[220px] p-4 rounded-lg shadow-md mb-8 flex flex-col items-center dark:bg-gray-800 bg-gray-200 dark:text-[#CBD5E1] text-[#1A1A1A]"
+                    className="w-[220px] p-4 rounded-lg shadow-md flex flex-col items-center dark:bg-gray-800 bg-gray-200 dark:text-[#CBD5E1] text-[#1A1A1A]"
                     initial={isPhone ? aimatePhoneInitial: aimateDesktopInitial }
                     whileInView={isPhone ? aimatePhonefinal : aimateDesktopfinal}
                     transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -88,7 +88,7 @@ export default function Skills() {
         >
           <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Additional Skills</h3>
           <div className="flex flex-wrap justify-center gap-3">
-            {["Api Route", "zod", 'UI/UX Design', " Git and Github ", 'Responsive Design', 'Testing (Jest)'].map((skill) => (
+            {["Prisma", "PostgreSQL", "Api Route", "zod", 'UI/UX Design', " Git and Github ", 'Responsive Design', 'Testing (Jest)'].map((skill) => (
               <span 
                 key={skill} 
                 className="px-4 py-2 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 rounded-full text-sm shadow-sm"
