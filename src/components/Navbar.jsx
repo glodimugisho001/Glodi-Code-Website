@@ -24,7 +24,6 @@ export default function Navbar() {
         }
 
         localStorage.setItem("themeValue", JSON.stringify(isThemeDark))
-        console.log(isThemeDark)
     },[isThemeDark])
 
 
