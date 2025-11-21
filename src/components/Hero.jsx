@@ -2,7 +2,7 @@ import React from "react";
 import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion";
-import glodi from '../assets/profile.jpg'
+import glodi from '../assets/profile.webp'
 
 export default function Hero() {
   return (
@@ -90,6 +90,7 @@ export default function Hero() {
                     src={glodi} // Adjust the path as necessary
                     alt="Glodi's profile"
                     className="w-[250px] h-[280px] object-cover rounded-2xl"
+                    loading="lazy"
                 />
             </motion.div>
         </div>

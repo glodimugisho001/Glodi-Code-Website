@@ -8,12 +8,12 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Globe } from 'lucide-react'
-import convertisseur from '../assets/unit-converter.png'
-import Blog from "../assets/ReactBlog.png"
-import todo from "../assets/todolistApp.png"
-import portfolio from "../assets/portfolio-glodi.png"
-import LittleLemon from "../assets/littleLemon.png"
-import quireact from "../assets/quizreact.png"
+import convertisseur from '../assets/unit-converter.webp'
+import Blog from "../assets/ReactBlog.webp"
+import todo from "../assets/todolistApp.webp"
+import portfolio from "../assets/portfolio-glodi.webp"
+import LittleLemon from "../assets/littleLemon.webp"
+import quireact from "../assets/quizreact.webp"
 
 
 const dataProjects = [
@@ -74,7 +74,7 @@ export default function Projects() {
                 {dataProjects.map((project, index) => (
                     <Card key={index} className="h-[415px]   dark:bg-gray-900 dark:text-whitebg-[#F5F5F5] text-[#1A1A1A] py-0 pb-6 hover:translate-y-1.5 transition-transform  cursor-pointer">
                         <CardContent className="px-0 overflow-hidden relative rounded-t-lg">
-                            <a href={project.url} target="_blank"><img src={project.image} alt={project.title} className="w-full h-48 mb-4 object-cover  object-center transition-transform duration-500 hover:scale-110" /></a>
+                            <a href={project.url} target="_blank"><img src={project.image} loading="lazy" alt={project.title} className="w-full h-48 mb-4 object-cover  object-center transition-transform duration-500 hover:scale-110" /></a>
                             {/* <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div> */}
                         </CardContent>
                         <CardHeader className='px-3'>
