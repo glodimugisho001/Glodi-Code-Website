@@ -10,7 +10,7 @@ import {
 import { Globe } from 'lucide-react'
 import convertisseur from '../assets/unit-converter.webp'
 import Blog from "../assets/ReactBlog.webp"
-import todo from "../assets/todolistApp.webp"
+import todo from "../assets/todoapp.webp"
 import portfolio from "../assets/portfolio-glodi.webp"
 import LittleLemon from "../assets/littleLemon.webp"
 import quireact from "../assets/quizreact.webp"
@@ -48,9 +48,9 @@ const dataProjects = [
     {
         title: "Todo List",
         description: "A simple todo list, with a clean and intuitive interface for managing your tasks.",
-        url:"https://todolist-eta-peach.vercel.app/",
+        url:"https://todo-app-three-gilt-20.vercel.app/",
         image: todo,
-        stack: ["React", "Tailwind Css"]
+        stack: ["Next js", "Tailwind Css", "Prisma", "postgresql"]
     },
     {
         title: "Unit Converter",

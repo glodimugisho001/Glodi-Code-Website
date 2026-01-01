@@ -26,7 +26,6 @@ export default function Navbar() {
         localStorage.setItem("themeValue", JSON.stringify(isThemeDark))
     },[isThemeDark])
 
-
   return (
     <>
         <div className="relative inset-0 md:max-w-[1000px] md:mx-auto px-4 md:px-6 lg:px-0">
