@@ -38,7 +38,7 @@ const dataContact = [
   {
     title: "phone",
     icon: Phone,
-    description: "+243 97 600 42 67",
+    description: "+243 98 937 16 02",
   },
   {
     title: "Location",
@@ -215,13 +215,13 @@ function ContactFrom({
       });
       const result = await res.json();
       if (res.ok) {
-        alert("Message envoyé avec succès!");
+        toast.success("Message envoyé avec success.",{id:"email"});
         console.log("Succès :", result);
         setIsLoading(false);
         reset();
         return;
       } else {
-        alert("Erreur lors de l'envoi du message. Veuillez réessayer.");
+        toast.error("Echec lors de l'envoie du message.",{id:"email"});
         console.log("Erreur API :", result);
         setIsLoading(false);
         reset();
