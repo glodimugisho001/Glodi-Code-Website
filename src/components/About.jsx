@@ -1,10 +1,11 @@
+/* eslint-disable no-unused-vars */
 import React, {useEffect, useState} from 'react'
 import { motion } from 'framer-motion'
 
 const dataAbout = [
     {
         title: "Experience",
-        description: "I have 1 year of experience in web development, mainly self-taught and through personal projects. I am passionate about continuous learning and creating innovative solutions."
+        description: "I have almost 2 year of experience in web development, mainly self-taught and through personal projects. I am passionate about continuous learning and creating innovative solutions."
     },
     {
         title: "Education",
