@@ -1,0 +1,76 @@
+{
+  "translation": {
+    "nav": {
+      "home": "Accueil",
+      "about": "À propos",
+      "skills": "Compétences",
+      "projects": "Projets",
+      "contact": "Contact"
+    },
+    "hero": {
+      "hello": "Bonjour, je suis",
+      "title": "Développeur Full Stack",
+      "description": "Je construis des applications web modernes et performantes de bout en bout. React, Next.js en frontend — API Routes, Server Actions, Prisma & PostgreSQL en backend.",
+      "contact": "Contactez-moi",
+      "view_work": "Voir mes travaux"
+    },
+    "about": {
+      "title": "À propos de moi",
+      "subtitle": "Je suis un Développeur Full Stack passionné avec un œil attentif pour le design et un dévouement à la création d'expériences utilisateur fluides de bout en bout.",
+      "experience": "Expérience",
+      "exp_desc": "J'ai presque 2 ans d'expérience en développement web, principalement en autodidacte et à travers des projets personnels. Je suis passionné par l'apprentissage continu et la création de solutions innovantes.",
+      "education": "Formation",
+      "edu_desc": "Diplôme d'études secondaires en électronique. Actuellement étudiant à l'université en Génie Informatique."
+    },
+    "skills": {
+      "title": "Compétences & Technologies",
+      "subtitle": "Je construis des applications web complètes — des interfaces pixel-perfect aux backends robustes avec bases de données.",
+      "additional": "Compétences Additionnelles"
+    },
+    "projects": {
+      "title": "Projets",
+      "subtitle": "Voici quelques-uns de mes projets récents qui illustrent mes compétences et ma créativité.",
+      "visit": "Visiter le site",
+      "portfolio_desc": "Mon propre site portfolio, conçu pour présenter mes projets, mes compétences et mon expérience.",
+      "little_lemon_desc": "Application pour aider les gens à réserver une table au restaurant Little Lemon.",
+      "blog_desc": "Un blog moderne et minimaliste conçu pour une publication et une lecture sans effort, avec une interface fluide et élégante.",
+      "quiz_desc": "Une application de quiz simple avec une interface intuitive pour tester vos connaissances.",
+      "todo_desc": "Une liste de tâches avec une interface propre pour gérer les tâches, propulsée par un backend full-stack.",
+      "converter_desc": "Un convertisseur d'unités polyvalent qui permet aux utilisateurs de convertir des unités de quantités continues."
+    },
+    "footer": {
+      "description": "Un Développeur Full Stack passionné créant des expériences numériques exceptionnelles avec des technologies web modernes.",
+      "quick_links": "Liens rapides",
+      "contact": "Contact",
+      "rights": "Tous droits réservés.",
+      "built_with": "Construit avec React & Tailwind CSS"
+    },
+    "contact": {
+      "title": "Contactez-moi",
+      "subtitle": "Vous avez un projet en tête ou souhaitez discuter d'opportunités ? Je serais ravi de vous entendre !",
+      "info_title": "Informations de Contact",
+      "follow_me": "Suivez-moi",
+      "form": {
+        "name": "Nom",
+        "name_placeholder": "Votre nom complet",
+        "email": "Email",
+        "email_placeholder": "votre@email.com",
+        "subject": "Sujet",
+        "subject_placeholder": "De quoi s'agit-il ?",
+        "message": "Message",
+        "message_placeholder": "Votre message...",
+        "send": "Envoyer le message",
+        "sending": "Envoi...",
+        "success": "Message envoyé avec succès.",
+        "error": "Échec de l'envoi du message.",
+        "validation": {
+          "name_req": "Le nom est requis",
+          "email_req": "L'email est requis",
+          "email_inv": "Format d'email invalide",
+          "subject_req": "Le sujet est requis",
+          "message_req": "Le message est requis"
+        }
+      }
+    }
+  }
+}

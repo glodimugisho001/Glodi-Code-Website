@@ -1,0 +1,76 @@
+{
+  "translation": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "skills": "Skills",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "hero": {
+      "hello": "Hello, I'm",
+      "title": "Full Stack Developer",
+      "description": "I build modern, performant web applications from end to end. React, Next.js on the frontend — API Routes, Server Actions, Prisma & PostgreSQL on the backend.",
+      "contact": "Contact Me",
+      "view_work": "View My Work"
+    },
+    "about": {
+      "title": "About Me",
+      "subtitle": "I'm a passionate Full Stack Developer with a keen eye for design and a dedication to creating seamless, end-to-end user experiences.",
+      "experience": "Experience",
+      "exp_desc": "I have almost 2 years of experience in web development, mainly self-taught and through personal projects. I am passionate about continuous learning and creating innovative solutions.",
+      "education": "Education",
+      "edu_desc": "High school diploma in electronics. Currently a university student in Computer Engineering."
+    },
+    "skills": {
+      "title": "Skills & Technologies",
+      "subtitle": "I build complete web applications — from pixel-perfect UIs to robust backends with databases.",
+      "additional": "Additional Skills"
+    },
+    "projects": {
+      "title": "Projects",
+      "subtitle": "Here are some of my recent projects that showcase my skills and creativity.",
+      "visit": "Visit Site",
+      "portfolio_desc": "My own web portfolio site, designed to showcase my projects, skills, and experience.",
+      "little_lemon_desc": "App for helping people book a table at the Little Lemon restaurant.",
+      "blog_desc": "A modern and minimalist blog designed for effortless publishing and reading, with a smooth and elegant interface.",
+      "quiz_desc": "A simple quiz app with a clean and intuitive interface for testing your knowledge.",
+      "todo_desc": "A todo list with a clean interface for managing tasks, powered by a full-stack backend.",
+      "converter_desc": "A versatile unit converter that allows users to convert units of continuous quantities."
+    },
+    "footer": {
+      "description": "A passionate Full Stack Developer building exceptional digital experiences with modern web technologies.",
+      "quick_links": "Quick Links",
+      "contact": "Contact",
+      "rights: ": "All rights reserved.",
+      "built_with": "Built with React & Tailwind CSS"
+    },
+    "contact": {
+      "title": "Get In Touch",
+      "subtitle": "Have a project in mind or want to discuss potential opportunities? I'd love to hear from you!",
+      "info_title": "Contact Information",
+      "follow_me": "Follow Me",
+      "form": {
+        "name": "Name",
+        "name_placeholder": "Your full name",
+        "email": "Email",
+        "email_placeholder": "your@email.com",
+        "subject": "Subject",
+        "subject_placeholder": "What's this about?",
+        "message": "Message",
+        "message_placeholder": "Your message...",
+        "send": "Send Message",
+        "sending": "Sending...",
+        "success": "Message sent successfully.",
+        "error": "Failed to send message.",
+        "validation": {
+          "name_req": "Name is required",
+          "email_req": "Email is required",
+          "email_inv": "Invalid email format",
+          "subject_req": "Subject is required",
+          "message_req": "Message is required"
+        }
+      }
+    }
+  }
+}
