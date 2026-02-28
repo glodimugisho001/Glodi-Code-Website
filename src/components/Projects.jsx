@@ -1,4 +1,5 @@
-import React from 'react'
+/* eslint-disable no-unused-vars */
+import React from "react";
 import {
   Card,
   CardContent,
@@ -6,97 +7,170 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Globe } from 'lucide-react'
-import convertisseur from '../assets/unit-converter.webp'
-import Blog from "../assets/ReactBlog.webp"
-import todo from "../assets/todoapp.webp"
-import portfolio from "../assets/portfolio-glodi.webp"
-import LittleLemon from "../assets/littleLemon.webp"
-import quireact from "../assets/quizreact.webp"
-
-
-const dataProjects = [
-    {
-        title: "Portfolio",
-        description: "My own web portfolio site, designed to showcase my projects, skills, and experience.",
-        url: "https://glodi-code.vercel.app/",
-        image: portfolio,
-        stack: ["React", "Tailwind Css", "Emailjs", "framer-motion"]
-    },
-    {
-        title: "Little Lemon Booking table",
-        description: "App for helping people to booking a table",
-        url: "https://little-lemon-app-teal.vercel.app/",
-        image: LittleLemon,
-        stack: ["React", "Css"]
-    },
-    {
-        title: "React Blog",
-        description: "A modern and minimalist blog designed for effortless publishing and reading, with a smooth and elegant interface.",
-        url: "https://mon-blog-teal.vercel.app/",
-        image: Blog,
-        stack: ["Next", "Ts", "Tailwind CSS", "Motion"]
-    },
-    {
-        title: "Quiz React",
-        description: "A simple quiz app, with a clean and intuitive interface for managing your tasks.",
-        url: "https://quiz-react-one-wine.vercel.app/",
-        image: quireact,
-        stack: ["React", "Tailwind Css",]
-    },
-    {
-        title: "Todo List",
-        description: "A simple todo list, with a clean and intuitive interface for managing your tasks.",
-        url:"https://todo-app-three-gilt-20.vercel.app/",
-        image: todo,
-        stack: ["Next js", "Tailwind Css", "Prisma", "postgresql"]
-    },
-    {
-        title: "Unit Converter",
-        description: "A versatile unit converter application that allows users to convert units of continuous quantities.",
-        url:"https://convertisseur-unites-nine.vercel.app/",
-        image: convertisseur,
-        stack: ["React", "Tailwind Css"]
-    }
-]
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
+import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import convertisseur from "../assets/unit-converter.webp";
+import Blog from "../assets/ReactBlog.webp";
+import todo from "../assets/todoapp.webp";
+import portfolio from "../assets/portfolio-glodi.webp";
+import LittleLemon from "../assets/littleLemon.webp";
+import quireact from "../assets/quizreact.webp";
 
 export default function Projects() {
-    return (
-        <div className='md:max-w-[1000px] md:mx-auto py-16'>
-            <div className='text-center'>
-                <h1 className="text-3xl font-bold  mb-4">Projects</h1>
-                <p className=" max-w-2xl mx-auto dark:text-[#CBD5E1] text-[#1A1A1A]">
-                    Here are some of my recent projects that showcase my skills and creativity.
-                </p>
-            </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center items-center md:p-4 lg:p-0 mt-10'>
-                {dataProjects.map((project, index) => (
-                    <Card key={index} className="h-[415px]   dark:bg-gray-900 dark:text-whitebg-[#F5F5F5] text-[#1A1A1A] py-0 pb-6 hover:translate-y-1.5 transition-transform  cursor-pointer">
-                        <CardContent className="px-0 overflow-hidden relative rounded-t-lg">
-                            <a href={project.url} target="_blank"><img src={project.image} loading="lazy" alt={project.title} className="w-full h-48 mb-4 object-cover  object-center transition-transform duration-500 hover:scale-110" /></a>
-                            {/* <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div> */}
-                        </CardContent>
-                        <CardHeader className='px-3'>
-                            <CardTitle><a href={project.url} target="_blank" className='text-blue-500 dark:text-blue-400 text-[18px] font-bold hover:text-[var(--link-hover)] active:text-[var(--link-active)] transition-[var(--link-transition)]'>{project.title}</a></CardTitle>
-                            <CardDescription className="dark:text-[#CBD5E1] text-[#1A1A1A] cursor-text text-[14px] line-clamp-2 hover:line-clamp-none transition-all duration-300">{project.description}</CardDescription>
-                        </CardHeader>
-                        <CardFooter className=" block px-3">
-                            <div className=' flex flex-wrap gap-2 mb-3 cursor-text '>
-                                {project.stack.map((stack, index)=>(
-                                    <span key={index} className='px-2 py-1 text-[12px] dark:bg-gray-800 dark:text-gray-300 bg-gray-200 text-black rounded-full text-xs'>{stack}</span>
-                                ))}
-                            </div>          
-                            <a href={project.url} target='_blank' className=' rounded-2xl transition-all duration-200'>
-                                <button className='flex justify-center items-center gap-2 px-3 py-1 rounded-2xl   dark:bg-blue-700 dark:hover:bg-blue-800 dark:active:bg-blue-600 bg-blue-500 text-[#F5F5F5] hover:bg-blue-800 active:to-blue-600'>                                
-                                    <Globe size={14}/>
-                                    <span>webSite</span>
-                                </button>
-                            </a>
-                        </CardFooter>
-                    </Card>
-                ))}
-            </div>
-        </div>
-    )
+  const { t } = useTranslation();
+
+  const dataProjects = [
+    {
+      title: "Portfolio",
+      description: t(
+        "projects.portfolio_desc",
+        "My own web portfolio site, designed to showcase my projects, skills, and experience.",
+      ),
+      url: "https://glodi-code.vercel.app/",
+      image: portfolio,
+      stack: ["React", "Tailwind CSS", "EmailJS", "Framer Motion"],
+    },
+    {
+      title: "Little Lemon",
+      description: t(
+        "projects.little_lemon_desc",
+        "App for helping people book a table at the Little Lemon restaurant.",
+      ),
+      url: "https://little-lemon-app-teal.vercel.app/",
+      image: LittleLemon,
+      stack: ["React", "CSS"],
+    },
+    {
+      title: "React Blog",
+      description: t(
+        "projects.blog_desc",
+        "A modern and minimalist blog designed for effortless publishing and reading, with a smooth and elegant interface.",
+      ),
+      url: "https://mon-blog-teal.vercel.app/",
+      image: Blog,
+      stack: ["Next.js", "TypeScript", "Tailwind CSS", "Motion"],
+    },
+    {
+      title: "Quiz App",
+      description: t(
+        "projects.quiz_desc",
+        "A simple quiz app with a clean and intuitive interface for testing your knowledge.",
+      ),
+      url: "https://quiz-react-one-wine.vercel.app/",
+      image: quireact,
+      stack: ["React", "Tailwind CSS"],
+    },
+    {
+      title: "Todo List",
+      description: t(
+        "projects.todo_desc",
+        "A todo list with a clean interface for managing tasks, powered by a full-stack backend.",
+      ),
+      url: "https://todo-app-three-gilt-20.vercel.app/",
+      image: todo,
+      stack: ["Next.js", "Tailwind CSS", "Prisma", "PostgreSQL"],
+    },
+    {
+      title: "Unit Converter",
+      description: t(
+        "projects.converter_desc",
+        "A versatile unit converter that allows users to convert units of continuous quantities.",
+      ),
+      url: "https://convertisseur-unites-nine.vercel.app/",
+      image: convertisseur,
+      stack: ["React", "Tailwind CSS"],
+    },
+  ];
+
+  return (
+    <div className="md:max-w-[1000px] md:mx-auto py-16">
+      <motion.div
+        className="text-center mb-10"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+      >
+        <h2 className="text-3xl font-bold tracking-tight mb-3">
+          {t("projects.title")}
+        </h2>
+        <p className="max-w-2xl mx-auto text-muted-foreground text-base leading-relaxed">
+          {t("projects.subtitle")}
+        </p>
+      </motion.div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {dataProjects.map((project, index) => (
+          <motion.div
+            key={index}
+            className="h-full"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.4, delay: index * 0.07 }}
+          >
+            <Card className="h-full group border-border bg-card overflow-hidden hover:shadow-md transition-shadow duration-200 flex flex-col">
+              <CardContent className="p-0">
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block overflow-hidden"
+                >
+                  <img
+                    src={project.image}
+                    loading="lazy"
+                    alt={project.title}
+                    className="w-full h-44 object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  />
+                </a>
+              </CardContent>
+
+              <CardHeader className="px-4 pt-4 pb-2">
+                <CardTitle className="text-base">
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                  >
+                    {project.title}
+                  </a>
+                </CardTitle>
+                <CardDescription className="text-xs leading-relaxed line-clamp-2">
+                  {project.description}
+                </CardDescription>
+              </CardHeader>
+
+              <CardFooter className="px-4 pb-4 pt-0 flex flex-col items-start gap-3 mt-auto">
+                <div className="flex flex-wrap gap-1.5">
+                  {project.stack.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="px-2 py-0.5 text-xs rounded-full bg-muted text-muted-foreground border border-border"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <Button variant="outline" size="sm" asChild>
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ExternalLink size={13} className="mr-1.5" />
+                    {t("projects.visit")}
+                  </a>
+                </Button>
+              </CardFooter>
+            </Card>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
 }

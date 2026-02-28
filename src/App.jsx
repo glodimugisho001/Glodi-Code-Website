@@ -20,53 +20,44 @@ const LoadingFallback = () => (
 export default function App() {
   return (
     <>
-      <div className="dark:bg-gray-900 dark:text-white bg-[#F5F5F5] text-[#1A1A1A] ">
+      <div className="bg-background text-foreground">
         <Motion.div
-          className="sticky top-0 shadow-md backdrop-blur-sm z-40"
+          className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur-md"
           initial={{ y: -100 }}
           animate={{ y: 0 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.6 }}
         >
           <Navbar />
         </Motion.div>
+
         <Hero />
+
         <Suspense fallback={<LoadingFallback />}>
-          <div
-            id="about"
-            className="dark:bg-gray-800 bg-gray-200 px-4 md:px-6 lg:px-0"
-          >
+          <div id="about" className="bg-muted/30 px-4 md:px-6 lg:px-0">
             <About />
           </div>
         </Suspense>
+
         <Suspense fallback={<LoadingFallback />}>
-          <div
-            id="skills"
-            className="dark:bg-gray-900 bg-[#F5F5F5] dark:text-white text-[#1A1A1A] px-4 md:px-6 lg:px-0"
-          >
+          <div id="skills" className="px-4 md:px-6 lg:px-0">
             <Skills />
           </div>
         </Suspense>
+
         <Suspense fallback={<LoadingFallback />}>
-          <div
-            id="project"
-            className="dark:bg-gray-800 bg-gray-200 px-4 md:px-6 lg:px-0"
-          >
+          <div id="project" className="bg-muted/30 px-4 md:px-6 lg:px-0">
             <Projects />
           </div>
         </Suspense>
+
         <Suspense fallback={<LoadingFallback />}>
-          <div
-            id="contact"
-            className="dark:bg-gray-900 bg-[#F5F5F5] dark:text-white text-[#1A1A1A] px-4 md:px-6 lg:px-0"
-          >
+          <div id="contact" className="px-4 md:px-6 lg:px-0">
             <Contact />
           </div>
         </Suspense>
+
         <Suspense fallback={<LoadingFallback />}>
-          <div
-            id=""
-            className="bg-gray-900 text-white px-4 mt-20 pt-4 md:px-6 lg:px-0"
-          >
+          <div className="bg-slate-900 dark:bg-slate-950 text-slate-100 px-4 md:px-6 lg:px-0">
             <Footer />
           </div>
         </Suspense>

@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const dataSkills = [
   {
@@ -45,74 +46,69 @@ const dataSkills = [
   },
 ];
 
+const additionalSkills = [
+  "Server Actions",
+  "Next.js API Routes",
+  "Zod",
+  "UI/UX Design",
+  "Git & GitHub",
+  "Responsive Design",
+  "REST API",
+];
+
 export default function Skills() {
-  const [isPhone, setIsPhone] = useState(false);
+  const { t } = useTranslation();
 
-  useEffect(() => {
-    function handleResize() {
-      setIsPhone(window.innerWidth < 500);
-    }
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const aimatePhoneInitial = { opacity: 0, x: 50 };
-  const aimatePhonefinal = { opacity: 1, x: 0 };
-  const aimateDesktopInitial = { opacity: 0, y: 50 };
-  const aimateDesktopfinal = { opacity: 1, y: 0 };
   return (
-    <div className="md:max-w-[1000px] md:mx-auto mt-14 mb-10 ">
+    <div className="md:max-w-[1000px] md:mx-auto py-16">
       <motion.div
-        className="text-center"
+        className="text-center mb-10"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false, amount: 0.5 }}
-        transition={{ duration: 0.6 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
       >
-        <h1 className="text-3xl font-bold mb-4">Technical Skills</h1>
-        <p className=" max-w-2xl mx-auto dark:text-[#CBD5E1] text-[#1A1A1A]">
-          I build complete web applications — from pixel-perfect UIs to robust
-          backends with databases.
+        <h2 className="text-3xl font-bold tracking-tight mb-3">
+          {t("skills.title")}
+        </h2>
+        <p className="max-w-2xl mx-auto text-muted-foreground text-base leading-relaxed">
+          {t("skills.subtitle")}
         </p>
       </motion.div>
-      <motion.div className="mt-8 flex flex-col md:flex-row flex-wrap gap-4 justify-center items-center ">
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
         {dataSkills.map((item, index) => (
           <motion.div
             key={index}
-            className="w-[220px] p-4 rounded-lg shadow-md flex flex-col items-center dark:bg-gray-800 bg-gray-200 dark:text-[#CBD5E1] text-[#1A1A1A]"
-            initial={isPhone ? aimatePhoneInitial : aimateDesktopInitial}
-            whileInView={isPhone ? aimatePhonefinal : aimateDesktopfinal}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
-            viewport={{ once: false, amount: 0.5 }}
+            className="flex flex-col items-center gap-2.5 p-4 rounded-xl border border-border bg-card shadow-sm hover:shadow-md transition-shadow duration-200"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.06 }}
+            viewport={{ once: true, amount: 0.3 }}
           >
-            <img src={item.image} alt={item.title} className="w-16 h-16 mb-2" />
-            <h3 className="font-bold text-xl mb-2">{item.title}</h3>
+            <img
+              src={item.image}
+              alt={item.title}
+              className="w-10 h-10 object-contain"
+            />
+            <span className="text-sm font-medium">{item.title}</span>
           </motion.div>
         ))}
-      </motion.div>
+      </div>
+
       <motion.div
-        className="mt-16 dark:bg-gray-800 bg-gray-200 dark:text-[#CBD5E1] text-[#1A1A1A] p-8 rounded-lg shadow-md text-center"
+        className="mt-6 p-6 rounded-xl border border-border bg-card shadow-sm"
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.8 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.5, delay: 0.15 }}
       >
-        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-          Additional Skills
-        </h3>
-        <div className="flex flex-wrap justify-center gap-3">
-          {[
-            "Server Actions",
-            "Next.js API Routes",
-            "Zod",
-            "UI/UX Design",
-            "Git & GitHub",
-            "Responsive Design",
-            "REST API",
-          ].map((skill) => (
+        <h3 className="text-sm font-semibold mb-3">{t("skills.additional")}</h3>
+        <div className="flex flex-wrap gap-2">
+          {additionalSkills.map((skill) => (
             <span
               key={skill}
-              className="px-4 py-2 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 rounded-full text-sm shadow-sm"
+              className="px-3 py-1 text-xs font-medium rounded-full bg-muted text-muted-foreground border border-border"
             >
               {skill}
             </span>

@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useRef, useState, useEffect } from "react";
-
+import React, { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -17,180 +16,160 @@ import {
   Instagram,
 } from "lucide-react";
 import { motion } from "framer-motion";
-
-const schemas = yup.object().shape({
-  user_name: yup.string().required("Name is required"),
-  user_email: yup
-    .string()
-    .email("Invalid email format")
-    .required("Email is required"),
-  subject: yup.string().required("Subject is required"),
-  message: yup.string().required("Message is required"),
-});
-
-const dataContact = [
-  {
-    title: "Email",
-    icon: Mail,
-    description:
-      "https://mail.google.com/mail/?view=cm&to=glodicode.dev@gmail.com",
-  },
-  {
-    title: "phone",
-    icon: Phone,
-    description: "+243 98 937 16 02",
-  },
-  {
-    title: "Location",
-    icon: MapPin,
-    description: "Goma, RDC",
-  },
-];
+import { useTranslation } from "react-i18next";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 
 export default function Contact() {
-  const [isPhone, setIsPhone] = useState(false);
+  const { t } = useTranslation();
 
-  useEffect(() => {
-    function handleResize() {
-      setIsPhone(window.innerWidth < 768);
-    }
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const dataContact = [
+    {
+      title: t("contact.form.email"),
+      icon: Mail,
+      href: "https://mail.google.com/mail/?view=cm&to=glodicode.dev@gmail.com",
+      display: "glodicode.dev@gmail.com",
+    },
+    {
+      title: t("contact.form.phone"),
+      icon: Phone,
+      href: "tel:+243989371602",
+      display: "+243 98 937 16 02",
+    },
+    {
+      title: t("contact.info_title_loc", "Location"),
+      icon: MapPin,
+      href: null,
+      display: "Goma, RDC",
+    },
+  ];
 
-  const aimatePhoneInitial = { opacity: 0, x: 50 };
-  const aimatePhonefinal = { opacity: 1, x: 0 };
-  const aimateDesktopInitial = { opacity: 0, y: 50 };
-  const aimateDesktopfinal = { opacity: 1, y: 0 };
+  const socialLinks = [
+    {
+      icon: Github,
+      href: "https://github.com/glodimugisho001",
+      label: "GitHub",
+    },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/glodi-mugisho-877b74317/",
+      label: "LinkedIn",
+    },
+    { icon: Twitter, href: "https://x.com/GlodiMugisho", label: "Twitter" },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/glodi_mugisho/",
+      label: "Instagram",
+    },
+  ];
 
   return (
-    <>
-      <div className="md:max-w-[1000px] md:mx-auto mt-16">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold">Get In Touch</h1>
-          <p className=" max-w-2xl mx-auto dark:text-[#CBD5E1] text-[#1A1A1A]">
-            Have a project in mind or want to discuss potential opportunities?
-            I'd love to hear from you!
-          </p>
-        </div>
-        <div className="mt-8 flex flex-col md:flex-row gap-8 ">
-          <ContactInfo
-            aimatePhoneInitial={aimatePhoneInitial}
-            aimatePhonefinal={aimatePhonefinal}
-            aimateDesktopInitial={aimateDesktopInitial}
-            aimateDesktopfinal={aimateDesktopfinal}
-            isPhone={isPhone}
-          />
-          <ContactFrom
-            aimatePhoneInitial={aimatePhoneInitial}
-            aimatePhonefinal={aimatePhonefinal}
-            aimateDesktopInitial={aimateDesktopInitial}
-            aimateDesktopfinal={aimateDesktopfinal}
-            isPhone={isPhone}
-          />
-        </div>
+    <div className="md:max-w-[1000px] md:mx-auto py-16">
+      <motion.div
+        className="text-center mb-10"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+      >
+        <h2 className="text-3xl font-bold tracking-tight mb-3">
+          {t("contact.title")}
+        </h2>
+        <p className="max-w-2xl mx-auto text-muted-foreground text-base leading-relaxed">
+          {t("contact.subtitle")}
+        </p>
+      </motion.div>
+
+      <div className="flex flex-col md:flex-row gap-5">
+        <ContactInfo
+          dataContact={dataContact}
+          socialLinks={socialLinks}
+          t={t}
+        />
+        <ContactForm t={t} />
       </div>
-    </>
+    </div>
   );
 }
 
-function ContactInfoFollow() {
+function ContactInfo({ dataContact, socialLinks, t }) {
   return (
-    <>
-      <div className="flex-1 ">
-        <h2 className="text-2xl font-bold  mb-6">Contact Information</h2>
+    <motion.div
+      className="flex-1 p-6 rounded-xl border border-border bg-card shadow-sm"
+      initial={{ opacity: 0, y: 28 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5 }}
+    >
+      <h2 className="text-lg font-semibold mb-5">{t("contact.info_title")}</h2>
+
+      <div className="space-y-4 mb-8">
         {dataContact.map((item, index) => {
           const Icon = item.icon;
           return (
-            <div key={index} className="flex items-center gap-4 mb-4">
-              <Icon size={32} />
+            <div key={index} className="flex items-start gap-3">
+              <div className="mt-0.5 p-2 rounded-lg bg-muted shrink-0">
+                <Icon size={15} className="text-muted-foreground" />
+              </div>
               <div>
-                <h4 className="font-bold">{item.title}</h4>
-                {item.title.toLowerCase() === "email" ? (
+                <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide mb-0.5">
+                  {item.title}
+                </p>
+                {item.href ? (
                   <a
-                    href={`${item.description}`}
-                    className="text-blue-600 hover:underline cursor-pointer"
+                    href={item.href}
                     target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
                   >
-                    glodicode.dev@gmail.com
-                  </a>
-                ) : item.title.toLowerCase() === "phone" ? (
-                  <a
-                    href={`tel:${item.description.replace(/\s+/g, "")}`}
-                    className="text-blue-600 hover:underline cursor-pointer"
-                  >
-                    {item.description}
+                    {item.display}
                   </a>
                 ) : (
-                  <p>{item.description}</p>
+                  <p className="text-sm">{item.display}</p>
                 )}
               </div>
             </div>
           );
         })}
       </div>
-    </>
-  );
-}
 
-function ContactInfo({
-  isPhone,
-  aimatePhoneInitial,
-  aimatePhonefinal,
-  aimateDesktopInitial,
-  aimateDesktopfinal,
-}) {
-  return (
-    <motion.div
-      className="flex-1 p-4 rounded-lg shadow-md dark:bg-gray-800  dark:text-white bg-gray-200 text-[#1A1A1A]"
-      initial={isPhone ? aimatePhoneInitial : aimateDesktopInitial}
-      whileInView={isPhone ? aimatePhonefinal : aimateDesktopfinal}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: false, amount: 0.2 }}
-    >
-      <ContactInfoFollow />
-      <div className="mt-8">
-        <h2 className="text-xl font-bold mb-4">Follow Me</h2>
-        <div className="flex gap-4">
-          <a href="https://github.com/glodimugisho001">
-            <Github
-              size={24}
-              className="cursor-pointer hover:text-[var(--link-hover)] active:text-[var(--link-active)] transition-[var(--link-transition)]"
-            />
-          </a>
-          <a href="https://www.linkedin.com/in/glodi-mugisho-877b74317/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3Bca%2Bdpju4TxWSoc7BbmtDhA%3D%3D">
-            <Linkedin
-              size={24}
-              className="cursor-pointer hover:text-[var(--link-hover)] active:text-[var(--link-active)] transition-[var(--link-transition)]"
-            />
-          </a>
-          <a href="https://x.com/GlodiMugisho">
-            <Twitter
-              size={24}
-              className="cursor-pointer hover:text-[var(--link-hover)] active:text-[var(--link-active)] transition-[var(--link-transition)]"
-            />
-          </a>
-          <a href="https://www.instagram.com/glodi_mugisho/">
-            <Instagram
-              size={24}
-              className="cursor-pointer hover:text-[var(--link-hover)] active:text-[var(--link-active)] transition-[var(--link-transition)]"
-            />
-          </a>
+      <div>
+        <h3 className="text-sm font-semibold mb-3">{t("contact.follow_me")}</h3>
+        <div className="flex gap-2">
+          {socialLinks.map(({ icon: Icon, href, label }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="p-2 rounded-lg bg-muted text-muted-foreground hover:text-foreground hover:bg-muted/70 transition-colors duration-200"
+            >
+              <Icon size={16} />
+            </a>
+          ))}
         </div>
       </div>
     </motion.div>
   );
 }
 
-function ContactFrom({
-  isPhone,
-  aimatePhoneInitial,
-  aimatePhonefinal,
-  aimateDesktopInitial,
-  aimateDesktopfinal,
-}) {
-  const [IsLoading, setIsLoading] = useState(false);
+function ContactForm({ t }) {
+  const [isLoading, setIsLoading] = useState(false);
+  const form = useRef();
+
+  const schemas = yup.object().shape({
+    user_name: yup.string().required(t("contact.form.validation.name_req")),
+    user_email: yup
+      .string()
+      .email(t("contact.form.validation.email_inv"))
+      .required(t("contact.form.validation.email_req")),
+    subject: yup.string().required(t("contact.form.validation.subject_req")),
+    message: yup.string().required(t("contact.form.validation.message_req")),
+  });
+
   const {
     register,
     handleSubmit,
@@ -201,135 +180,110 @@ function ContactFrom({
     mode: "onTouched",
   });
 
-  const form = useRef();
   const sendEmail = async (formData, e) => {
     e.preventDefault();
-
     try {
       const res = await fetch("/api/sendEmail", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
       const result = await res.json();
       if (res.ok) {
-        toast.success("Message envoyé avec success.",{id:"email"});
-        console.log("Succès :", result);
+        toast.success(t("contact.form.success"), { id: "email" });
         setIsLoading(false);
         reset();
-        return;
       } else {
-        toast.error("Echec lors de l'envoie du message.",{id:"email"});
-        console.log("Erreur API :", result);
+        toast.error(t("contact.form.error"), { id: "email" });
         setIsLoading(false);
         reset();
       }
     } catch (error) {
-      console.log("Erreur réseau :", error);
+      console.log("Network error:", error);
       setIsLoading(false);
       reset();
     }
   };
+
   return (
     <motion.form
       ref={form}
-      className="flex-1 px-6 py-8 rounded-lg shadow-md dark:bg-gray-800 dark:text-white bg-gray-200 text-black"
+      className="flex-1 p-6 rounded-xl border border-border bg-card shadow-sm flex flex-col gap-4"
       onSubmit={handleSubmit((formData, e) => sendEmail(formData, e))}
-      initial={isPhone ? aimatePhoneInitial : aimateDesktopInitial}
-      whileInView={isPhone ? aimatePhonefinal : aimateDesktopfinal}
-      transition={{ duration: 0.6, delay: 0.2 }}
-      viewport={{ once: false, amount: 0.2 }}
+      initial={{ opacity: 0, y: 28 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5, delay: 0.1 }}
     >
-      <div className="mb-4">
-        <label htmlFor="user_name" className="block mb-1">
-          Name
-        </label>
-        <input
-          className="w-full p-2 border rounded-md dark:bg-gray-900 bg-[#F5F5F5] outline-none focus:ring-2 focus:ring-blue-600 dark:placeholder:text-gray-400 placeholder:text-gray-500 placeholder:text-sm"
+      <div className="space-y-1.5">
+        <Label htmlFor="user_name">{t("contact.form.name")}</Label>
+        <Input
           id="user_name"
-          name="user_name"
           type="text"
-          placeholder="your full name..."
+          placeholder={t("contact.form.name_placeholder")}
           {...register("user_name")}
         />
         {errors.user_name && (
-          <p className="text-red-500 font-medium">
-            {" "}
-            {errors.user_name.message}{" "}
-          </p>
+          <p className="text-xs text-destructive">{errors.user_name.message}</p>
         )}
       </div>
-      <div className="mb-4">
-        <label htmlFor="user_email" className="block mb-1">
-          Email
-        </label>
-        <input
-          className="w-full p-2 border rounded-md dark:bg-gray-900 bg-[#F5F5F5] outline-none focus:ring-2 focus:ring-blue-600 dark:placeholder:text-gray-400 placeholder:text-gray-500 placeholder:text-sm"
+
+      <div className="space-y-1.5">
+        <Label htmlFor="user_email">{t("contact.form.email")}</Label>
+        <Input
           id="user_email"
-          name="user_email"
           type="email"
-          placeholder="your email"
+          placeholder={t("contact.form.email_placeholder")}
           {...register("user_email")}
         />
         {errors.user_email && (
-          <p className="text-red-500 font-medium">
+          <p className="text-xs text-destructive">
             {errors.user_email.message}
           </p>
         )}
       </div>
-      <div className="mb-4">
-        <label htmlFor="subject" className="block mb-1">
-          Subject
-        </label>
-        <input
-          className="w-full p-2 border rounded-md dark:bg-gray-900 bg-[#F5F5F5] outline-none focus:ring-2 focus:ring-blue-600 dark:placeholder:text-gray-400 placeholder:text-gray-500 placeholder:text-sm"
+
+      <div className="space-y-1.5">
+        <Label htmlFor="subject">{t("contact.form.subject")}</Label>
+        <Input
           id="subject"
-          name="subject"
           type="text"
-          placeholder="the topic here..."
+          placeholder={t("contact.form.subject_placeholder")}
           {...register("subject")}
         />
         {errors.subject && (
-          <p className="text-red-500 font-medium">{errors.subject.message}</p>
+          <p className="text-xs text-destructive">{errors.subject.message}</p>
         )}
       </div>
-      <div className="mb-7">
-        <label htmlFor="message" className="block mb-1">
-          Message
-        </label>
-        <textarea
-          className="w-full p-2 border rounded-md dark:bg-gray-900 bg-[#F5F5F5] outline-none focus:ring-2 focus:ring-blue-600 dark:placeholder:text-gray-400 placeholder:text-gray-500 placeholder:text-sm"
+
+      <div className="space-y-1.5">
+        <Label htmlFor="message">{t("contact.form.message")}</Label>
+        <Textarea
           id="message"
-          name="message"
-          rows="4"
-          placeholder="some message..."
+          rows={4}
+          placeholder={t("contact.form.message_placeholder")}
           {...register("message")}
         />
         {errors.message && (
-          <p className="text-red-500 font-medium">{errors.message.message}</p>
+          <p className="text-xs text-destructive">{errors.message.message}</p>
         )}
       </div>
-      <button
-        onClick={() => setIsLoading(true)}
+
+      <Button
         type="submit"
-        value="send message"
-        className="bg-blue-600 hover:bg-blue-700 active:bg-blue-900 cursor-pointer text-white p-2 rounded-md transition-colors duration-200 w-full"
+        className="w-full mt-1"
+        onClick={() => setIsLoading(true)}
+        disabled={isLoading}
       >
-        {IsLoading ? (
-          <LoaderCircle
-            size={24}
-            className="animate-spin w-full flex justify-center items-center"
-          />
+        {isLoading ? (
+          <LoaderCircle size={18} className="animate-spin" />
         ) : (
           <>
-            <Send className="inline mr-2" /> Send Message
+            <Send size={15} className="mr-2" />
+            {t("contact.form.send")}
           </>
         )}
-      </button>
+      </Button>
     </motion.form>
   );
 }
-
-export { ContactInfoFollow };
