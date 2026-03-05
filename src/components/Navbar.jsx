@@ -40,47 +40,44 @@ export default function Navbar() {
         <a href="#acceuil" className="text-lg font-bold" translate="no">
           Glodi<span className="text-blue-600 dark:text-blue-400">Code.</span>
         </a>
+        <nav className="hidden md:flex">
+          <ul className="flex gap-6 text-sm font-medium text-muted-foreground">
+            {navLinks.map(({ label, href }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  className="hover:text-foreground transition-colors duration-200"
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-        <div className="flex items-center gap-5">
-          <nav className="hidden md:flex">
-            <ul className="flex gap-6 text-sm font-medium text-muted-foreground">
-              {navLinks.map(({ label, href }) => (
-                <li key={label}>
-                  <a
-                    href={href}
-                    className="hover:text-foreground transition-colors duration-200"
-                  >
-                    {label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-
-          <div className="flex items-center gap-3">
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center gap-1 text-xs font-bold text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-pointer uppercase"
-              aria-label="Toggle language"
-            >
-              <Languages size={18} />
-              <span>{i18n.language === "en" ? "en" : "fr"}</span>
-            </button>
-            <button
-              onClick={() => setIsThemeDark(!isThemeDark)}
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-pointer"
-              aria-label="Toggle theme"
-            >
-              {isThemeDark ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
-            <button
-              className="md:hidden text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-pointer"
-              onClick={menuToggle}
-              aria-label="Toggle menu"
-            >
-              {menuIsOpen ? <X size={20} /> : <Menu size={20} />}
-            </button>
-          </div>
+        <div className="flex items-center gap-3">
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-1 text-xs font-bold text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-pointer uppercase"
+            aria-label="Toggle language"
+          >
+            <Languages size={18} />
+            <span>{i18n.language === "en" ? "en" : "fr"}</span>
+          </button>
+          <button
+            onClick={() => setIsThemeDark(!isThemeDark)}
+            className="text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-pointer"
+            aria-label="Toggle theme"
+          >
+            {isThemeDark ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+          <button
+            className="md:hidden text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-pointer"
+            onClick={menuToggle}
+            aria-label="Toggle menu"
+          >
+            {menuIsOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
       </div>
 
