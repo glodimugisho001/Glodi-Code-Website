@@ -180,28 +180,32 @@ function ContactForm({ t }) {
     mode: "onTouched",
   });
 
-  const sendEmail = async (formData, e) => {
-    e.preventDefault();
+  const sendEmail = async (formData) => {
+    setIsLoading(true);
+  
     try {
       const res = await fetch("/api/sendEmail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
+  
       const result = await res.json();
+      console.log("result", result);
+  
       if (res.ok) {
         toast.success(t("contact.form.success"), { id: "email" });
-        setIsLoading(false);
-        reset();
       } else {
         toast.error(t("contact.form.error"), { id: "email" });
-        setIsLoading(false);
-        reset();
       }
+  
+      reset();
+  
     } catch (error) {
       console.log("Network error:", error);
-      setIsLoading(false);
       reset();
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -209,7 +213,7 @@ function ContactForm({ t }) {
     <motion.form
       ref={form}
       className="flex-1 p-6 rounded-xl border border-border bg-card shadow-sm flex flex-col gap-4"
-      onSubmit={handleSubmit((formData, e) => sendEmail(formData, e))}
+      onSubmit={handleSubmit(sendEmail)}
       initial={{ opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -272,7 +276,6 @@ function ContactForm({ t }) {
       <Button
         type="submit"
         className="w-full mt-1"
-        onClick={() => setIsLoading(true)}
         disabled={isLoading}
       >
         {isLoading ? (

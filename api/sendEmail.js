@@ -6,6 +6,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
+  console.log("req.body", req.body);
   const { user_name, user_email, subject, message } = req.body;
 
   if (!user_name || !user_email || !subject || !message) {
@@ -46,9 +47,13 @@ export default async function handler(req, res) {
       text: `Bonjour ${user_name},\n\nNous avons bien reçu votre message; nous vous répondrons dans les meilleurs délais.\n\nCordialement,\nGlodi Code`,
     });
 
+    
     return res.status(200).json({ success: true, message: "Emails envoyés" });
   } catch (error) {
-    console.error("sendEmail error:", error.message);
-    return res.status(500).json({ success: false, message: error.message });
+    console.error("sendEmail error:", error);
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
   }
 }
