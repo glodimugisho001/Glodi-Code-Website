@@ -25,6 +25,11 @@ const dataSkills = [
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
   },
   {
+    title: "Better Auth",
+    image:
+      "https://imgs.search.brave.com/43Vy_gM5xpYP_U0M1gWDsee39AYqNpZrLbBtEbL96eg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdmds/LmFwcC9saWJyYXJ5/L2JldHRlci1hdXRo/X2xpZ2h0LnN2Zw",
+  },
+  {
     title: "Prisma",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
@@ -38,11 +43,6 @@ const dataSkills = [
     title: "Tailwind CSS",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
-  },
-  {
-    title: "HTML5",
-    image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
   },
 ];
 

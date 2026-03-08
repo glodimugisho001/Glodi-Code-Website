@@ -182,25 +182,24 @@ function ContactForm({ t }) {
 
   const sendEmail = async (formData) => {
     setIsLoading(true);
-  
+
     try {
       const res = await fetch("/api/sendEmail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-  
+
       const result = await res.json();
       console.log("result", result);
-  
+
       if (res.ok) {
         toast.success(t("contact.form.success"), { id: "email" });
       } else {
         toast.error(t("contact.form.error"), { id: "email" });
       }
-  
+
       reset();
-  
     } catch (error) {
       console.log("Network error:", error);
       reset();
@@ -273,11 +272,7 @@ function ContactForm({ t }) {
         )}
       </div>
 
-      <Button
-        type="submit"
-        className="w-full mt-1"
-        disabled={isLoading}
-      >
+      <Button type="submit" className="w-full mt-1" disabled={isLoading}>
         {isLoading ? (
           <LoaderCircle size={18} className="animate-spin" />
         ) : (
