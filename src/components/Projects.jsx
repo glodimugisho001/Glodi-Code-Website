@@ -49,7 +49,7 @@ export default function Projects() {
         "projects.blog_desc",
         "A modern and minimalist blog designed for effortless publishing and reading, with a smooth and elegant interface.",
       ),
-      url: "https://mon-blog-teal.vercel.app/",
+      url: "https://mini-blog-red-six.vercel.app/",
       image: Blog,
       stack: ["Next.js", "TypeScript", "Tailwind CSS", "Motion"],
     },
