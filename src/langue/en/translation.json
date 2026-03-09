@@ -3,6 +3,7 @@
     "nav": {
       "home": "Home",
       "about": "About",
+      "services": "Services",
       "skills": "Skills",
       "projects": "Projects",
       "contact": "Contact"
@@ -10,44 +11,66 @@
     "hero": {
       "hello": "Hello, I'm",
       "title": "Full Stack Developer",
-      "description": "I build modern, performant web applications from end to end. React, Next.js on the frontend — API Routes, Server Actions, Prisma & PostgreSQL on the backend.",
+      "description": "I build modern, high-performance web applications from end to end. React and Next.js on the frontend - API Routes, Server Actions, Prisma, and PostgreSQL on the backend.",
       "contact": "Contact Me",
       "view_work": "View My Work"
     },
     "about": {
       "title": "About Me",
-      "subtitle": "I'm a passionate Full Stack Developer with a keen eye for design and a dedication to creating seamless, end-to-end user experiences.",
+      "subtitle": "I'm a passionate Full Stack Developer with a keen eye for design and a strong focus on building smooth end-to-end user experiences.",
       "experience": "Experience",
-      "exp_desc": "I have almost 2 years of experience in web development, mainly self-taught and through personal projects. I am passionate about continuous learning and creating innovative solutions.",
+      "exp_desc": "I have almost 2 years of experience in web development, mainly self-taught and through personal projects. I love continuous learning and building useful digital products.",
       "education": "Education",
       "edu_desc": "High school diploma in electronics. Currently a university student in Computer Engineering."
     },
+    "services": {
+      "title": "My services",
+      "subtitle": "Here are the main web services I can design and build for you.",
+      "items": {
+        "web_apps": {
+          "title": "Web applications",
+          "description": "I build modern web applications using technologies like React, Next.js, and scalable backend like Prisma and PostgreSQL to create fast and interactive products."
+        },
+        "business_sites": {
+          "title": "Business websites",
+          "description": "Modern and responsive websites for companies, startups, and personal brands to establish a strong online presence."
+        },
+        "blogs": {
+          "title": "Blogs and content platforms",
+          "description": "Clean and structured blog websites where creators and businesses can publish and manage content easily."
+        },
+        "features": {
+          "title": "Web app features",
+          "description": "Implementation of authentication, dashboards, and database integrations using tools like Prisma and PostgreSQL."
+        }
+      }
+    },
     "skills": {
       "title": "Skills & Technologies",
-      "subtitle": "I build complete web applications — from pixel-perfect UIs to robust backends with databases.",
+      "subtitle": "I build complete web applications - from pixel-perfect UIs to robust backends with databases.",
       "additional": "Additional Skills"
     },
     "projects": {
       "title": "Projects",
       "subtitle": "Here are some of my recent projects that showcase my skills and creativity.",
       "visit": "Visit Site",
-      "portfolio_desc": "My own web portfolio site, designed to showcase my projects, skills, and experience.",
-      "little_lemon_desc": "App for helping people book a table at the Little Lemon restaurant.",
+      "portfolio_desc": "My own portfolio website, designed to showcase my projects, skills, and experience.",
+      "little_lemon_desc": "An app that helps people book a table at the Little Lemon restaurant.",
       "blog_desc": "A modern and minimalist blog designed for effortless publishing and reading, with a smooth and elegant interface.",
       "quiz_desc": "A simple quiz app with a clean and intuitive interface for testing your knowledge.",
       "todo_desc": "A todo list with a clean interface for managing tasks, powered by a full-stack backend.",
       "converter_desc": "A versatile unit converter that allows users to convert units of continuous quantities."
     },
     "footer": {
-      "description": "A passionate Full Stack Developer building exceptional digital experiences with modern web technologies.",
+      "description": "A passionate Full Stack Developer building modern and effective digital experiences.",
       "quick_links": "Quick Links",
       "contact": "Contact",
-      "rights: ": "All rights reserved.",
+      "rights": "All rights reserved.",
       "built_with": "Built with React & Tailwind CSS"
     },
     "contact": {
       "title": "Get In Touch",
-      "subtitle": "Have a project in mind or want to discuss potential opportunities? I'd love to hear from you!",
+      "subtitle": "Have a project in mind or want to discuss opportunities? I'd love to hear from you!",
       "info_title": "Contact Information",
       "follow_me": "Follow Me",
       "form": {

@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 const quickLinks = [
   { label: "Home", href: "#acceuil", key: "nav.home" },
   { label: "About", href: "#about", key: "nav.about" },
+  { label: "Services", href: "#services", key: "nav.services" },
   { label: "Skills", href: "#skills", key: "nav.skills" },
   { label: "Projects", href: "#project", key: "nav.projects" },
   { label: "Contact", href: "#contact", key: "nav.contact" },
@@ -37,7 +38,6 @@ export default function Footer() {
   return (
     <footer className="md:max-w-[1000px] md:mx-auto py-12">
       <div className="flex flex-col md:flex-row gap-10 mb-10">
-        {/* Brand */}
         <div className="flex-1 min-w-0">
           <h2 className="text-lg font-bold mb-2" translate="no">
             GlodiCode.
@@ -61,7 +61,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Quick Links */}
         <div>
           <h3 className="text-sm font-semibold text-white mb-3">
             {t("footer.quick_links")}
@@ -80,7 +79,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Contact */}
         <div>
           <h3 className="text-sm font-semibold text-white mb-3">
             {t("footer.contact")}

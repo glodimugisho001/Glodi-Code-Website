@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import { motion as Motion } from "framer-motion";
 
 const About = lazy(() => import("./components/About"));
+const Services = lazy(() => import("./components/Services"));
 const Skills = lazy(() => import("./components/Skills"));
 const Projects = lazy(() => import("./components/Projects"));
 const Contact = lazy(() => import("./components/Contact"));
@@ -39,13 +40,19 @@ export default function App() {
         </Suspense>
 
         <Suspense fallback={<LoadingFallback />}>
-          <div id="skills" className="px-4 md:px-6 lg:px-0">
+          <div id="services" className="px-4 md:px-6 lg:px-0">
+            <Services />
+          </div>
+        </Suspense>
+
+        <Suspense fallback={<LoadingFallback />}>
+          <div id="skills" className="bg-muted/30 px-4 md:px-6 lg:px-0">
             <Skills />
           </div>
         </Suspense>
 
         <Suspense fallback={<LoadingFallback />}>
-          <div id="project" className="bg-muted/30 px-4 md:px-6 lg:px-0">
+          <div id="project" className="px-4 md:px-6 lg:px-0">
             <Projects />
           </div>
         </Suspense>

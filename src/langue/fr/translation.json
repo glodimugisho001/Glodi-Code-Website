@@ -2,53 +2,76 @@
   "translation": {
     "nav": {
       "home": "Accueil",
-      "about": "À propos",
-      "skills": "Compétences",
+      "about": "A propos",
+      "services": "Services",
+      "skills": "Competences",
       "projects": "Projets",
       "contact": "Contact"
     },
     "hero": {
       "hello": "Bonjour, je suis",
-      "title": "Développeur Full Stack",
-      "description": "Je construis des applications web modernes et performantes de bout en bout. React, Next.js en frontend — API Routes, Server Actions, Prisma & PostgreSQL en backend.",
+      "title": "Developpeur Full Stack",
+      "description": "Je construis des applications web modernes et performantes de bout en bout. React, Next.js en frontend - API Routes, Server Actions, Prisma et PostgreSQL en backend.",
       "contact": "Contactez-moi",
       "view_work": "Voir mes travaux"
     },
     "about": {
-      "title": "À propos de moi",
-      "subtitle": "Je suis un Développeur Full Stack passionné avec un œil attentif pour le design et un dévouement à la création d'expériences utilisateur fluides de bout en bout.",
-      "experience": "Expérience",
-      "exp_desc": "J'ai presque 2 ans d'expérience en développement web, principalement en autodidacte et à travers des projets personnels. Je suis passionné par l'apprentissage continu et la création de solutions innovantes.",
+      "title": "A propos de moi",
+      "subtitle": "Je suis un Developpeur Full Stack passionne avec un oeil attentif pour le design et un engagement fort dans la creation d'experiences utilisateur fluides de bout en bout.",
+      "experience": "Experience",
+      "exp_desc": "J'ai presque 2 ans d'experience en developpement web, principalement en autodidacte et a travers des projets personnels. Je suis passionne par l'apprentissage continu et la creation de solutions innovantes.",
       "education": "Formation",
-      "edu_desc": "Diplôme d'études secondaires en électronique. Actuellement étudiant à l'université en Génie Informatique."
+      "edu_desc": "Diplome d'etudes secondaires en electronique. Actuellement etudiant a l'universite en Genie Informatique."
+    },
+    "services": {
+      "title": "Mes services",
+      "subtitle": "Voici les principaux services web que je peux concevoir et developper pour vous.",
+      "items": {
+        "web_apps": {
+          "title": "Applications web",
+          "description": "Je cree des applications web modernes avec React, Next.js et des outils comme Prisma et PostgreSQL pour le backend afin de livrer des produits rapides et interactifs."
+        },
+        "business_sites": {
+          "title": "Sites web business",
+          "description": "Je realise des sites modernes et responsives pour les entreprises, startups et marques personnelles afin de renforcer leur presence en ligne."
+        },
+        "blogs": {
+          "title": "Blogs et plateformes de contenu",
+          "description": "Je construis des blogs propres et bien structures pour permettre aux createurs et aux entreprises de publier et gerer leur contenu facilement."
+        },
+        "features": {
+          "title": "Fonctionnalites web app",
+          "description": "J'integre l'authentification, les dashboards et les connexions base de donnees avec des outils comme Prisma et PostgreSQL."
+        }
+      }
     },
     "skills": {
-      "title": "Compétences & Technologies",
-      "subtitle": "Je construis des applications web complètes — des interfaces pixel-perfect aux backends robustes avec bases de données.",
-      "additional": "Compétences Additionnelles"
+      "title": "Competences & Technologies",
+      "subtitle": "Je construis des applications web completes - des interfaces pixel-perfect aux backends robustes avec bases de donnees.",
+      "additional": "Competences additionnelles"
     },
     "projects": {
       "title": "Projets",
-      "subtitle": "Voici quelques-uns de mes projets récents qui illustrent mes compétences et ma créativité.",
+      "subtitle": "Voici quelques-uns de mes projets recents qui illustrent mes competences et ma creativite.",
       "visit": "Visiter le site",
-      "portfolio_desc": "Mon propre site portfolio, conçu pour présenter mes projets, mes compétences et mon expérience.",
-      "little_lemon_desc": "Application pour aider les gens à réserver une table au restaurant Little Lemon.",
-      "blog_desc": "Un blog moderne et minimaliste conçu pour une publication et une lecture sans effort, avec une interface fluide et élégante.",
+      "portfolio_desc": "Mon propre site portfolio, concu pour presenter mes projets, mes competences et mon experience.",
+      "little_lemon_desc": "Application pour aider les gens a reserver une table au restaurant Little Lemon.",
+      "blog_desc": "Un blog moderne et minimaliste concu pour une publication et une lecture sans effort, avec une interface fluide et elegante.",
       "quiz_desc": "Une application de quiz simple avec une interface intuitive pour tester vos connaissances.",
-      "todo_desc": "Une liste de tâches avec une interface propre pour gérer les tâches, propulsée par un backend full-stack.",
-      "converter_desc": "Un convertisseur d'unités polyvalent qui permet aux utilisateurs de convertir des unités de quantités continues."
+      "todo_desc": "Une liste de taches avec une interface propre pour gerer les taches, propulsee par un backend full-stack.",
+      "converter_desc": "Un convertisseur d'unites polyvalent qui permet aux utilisateurs de convertir des unites de quantites continues."
     },
     "footer": {
-      "description": "Un Développeur Full Stack passionné créant des expériences numériques exceptionnelles avec des technologies web modernes.",
+      "description": "Un Developpeur Full Stack passionne creant des experiences numeriques modernes et efficaces.",
       "quick_links": "Liens rapides",
       "contact": "Contact",
-      "rights": "Tous droits réservés.",
+      "rights": "Tous droits reserves.",
       "built_with": "Construit avec React & Tailwind CSS"
     },
     "contact": {
       "title": "Contactez-moi",
-      "subtitle": "Vous avez un projet en tête ou souhaitez discuter d'opportunités ? Je serais ravi de vous entendre !",
-      "info_title": "Informations de Contact",
+      "subtitle": "Vous avez un projet en tete ou souhaitez discuter d'opportunites ? Je serais ravi de vous entendre !",
+      "info_title": "Informations de contact",
       "follow_me": "Suivez-moi",
       "form": {
         "name": "Nom",
@@ -61,8 +84,8 @@
         "message_placeholder": "Votre message...",
         "send": "Envoyer le message",
         "sending": "Envoi...",
-        "success": "Message envoyé avec succès.",
-        "error": "Échec de l'envoi du message.",
+        "success": "Message envoye avec succes.",
+        "error": "Echec de l'envoi du message.",
         "validation": {
           "name_req": "Le nom est requis",
           "email_req": "L'email est requis",
