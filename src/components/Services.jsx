@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { Code2, BriefcaseBusiness, Newspaper, Wrench } from "lucide-react";
 import { motion } from "framer-motion";
@@ -28,7 +29,7 @@ export default function Services() {
   ];
 
   return (
-    <section className="md:max-w-[1000px] md:mx-auto py-16">
+    <section className="md:max-w-250 md:mx-auto py-16">
       <motion.div
         className="text-center mb-10"
         initial={{ opacity: 0, y: 20 }}

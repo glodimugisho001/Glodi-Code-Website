@@ -53,14 +53,13 @@ const additionalSkills = [
   "UI/UX Design",
   "Git & GitHub",
   "Responsive Design",
-  "REST API",
 ];
 
 export default function Skills() {
   const { t } = useTranslation();
 
   return (
-    <div className="md:max-w-[1000px] md:mx-auto py-16">
+    <div className="md:max-w-250 md:mx-auto py-16">
       <motion.div
         className="text-center mb-10"
         initial={{ opacity: 0, y: 20 }}
@@ -103,8 +102,8 @@ export default function Skills() {
         viewport={{ once: true, amount: 0.4 }}
         transition={{ duration: 0.5, delay: 0.15 }}
       >
-        <h3 className="text-sm font-semibold mb-3">{t("skills.additional")}</h3>
-        <div className="flex flex-wrap gap-2">
+        <h3 className="text-sm text-center font-semibold mb-3">{t("skills.additional")}</h3>
+        <div className="flex flex-wrap justify-center gap-2">
           {additionalSkills.map((skill) => (
             <span
               key={skill}
