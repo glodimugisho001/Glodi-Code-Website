@@ -10,14 +10,14 @@
     },
     "hero": {
       "hello": "Hello, I'm",
-      "title": "Full Stack Developer",
+      "title": "Junior web developer Full Stack",
       "description": "I build modern, high-performance web applications from end to end. React and Next.js on the frontend - API Routes, Server Actions, Prisma, and PostgreSQL on the backend.",
       "contact": "Contact Me",
       "view_work": "View My Work"
     },
     "about": {
       "title": "About Me",
-      "subtitle": "I'm a passionate Full Stack Developer with a keen eye for design and a strong focus on building smooth end-to-end user experiences.",
+      "subtitle": "I'm a passionate Junior web developer with a strong focus on building smooth end-to-end user experiences.",
       "experience": "Experience",
       "exp_desc": "I have almost 2 years of experience in web development, mainly self-taught and through personal projects. I love continuous learning and building useful digital products.",
       "education": "Education",
@@ -62,7 +62,7 @@
       "converter_desc": "A versatile unit converter that allows users to convert units of continuous quantities."
     },
     "footer": {
-      "description": "A passionate Full Stack Developer building modern and effective digital experiences.",
+      "description": "A passionate Junior web developer Full Stack building modern and effective digital experiences.",
       "quick_links": "Quick Links",
       "contact": "Contact",
       "rights": "All rights reserved.",
