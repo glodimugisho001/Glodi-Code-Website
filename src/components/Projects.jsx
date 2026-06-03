@@ -18,6 +18,7 @@ import todo from "../assets/todoapp.webp";
 import portfolio from "../assets/portfolio-glodi.webp";
 import LittleLemon from "../assets/littleLemon.webp";
 import quireact from "../assets/quizreact.webp";
+import ulpglblog from "../assets/ulpglblog.png"
 
 export default function Projects() {
   const { t } = useTranslation();
@@ -32,6 +33,16 @@ export default function Projects() {
       url: "https://glodi-code.vercel.app/",
       image: portfolio,
       stack: ["React", "Tailwind CSS", "EmailJS", "Framer Motion"],
+    },
+    {
+      title: "Ulpgl Blog",
+      description: t(
+        "projects.ulpglblog_desc",
+        "Academic blog of the Free University of the Great Lakes Region (Goma, DRC). Research articles, university news and resources for students and teachers.",
+      ),
+      url: "https://ulpgl-blog.vercel.app/",
+      image: ulpglblog,
+      stack: ["Next js", "Tailwind CSS", "Prisma", "Postgresql", "Better Auth", "Tiptap"],
     },
     {
       title: "Little Lemon",
@@ -73,16 +84,16 @@ export default function Projects() {
       image: todo,
       stack: ["Next.js", "Tailwind CSS", "Prisma", "PostgreSQL"],
     },
-    {
-      title: "Unit Converter",
-      description: t(
-        "projects.converter_desc",
-        "A versatile unit converter that allows users to convert units of continuous quantities.",
-      ),
-      url: "https://convertisseur-unites-nine.vercel.app/",
-      image: convertisseur,
-      stack: ["React", "Tailwind CSS"],
-    },
+    // {
+    //   title: "Unit Converter",
+    //   description: t(
+    //     "projects.converter_desc",
+    //     "A versatile unit converter that allows users to convert units of continuous quantities.",
+    //   ),
+    //   url: "https://convertisseur-unites-nine.vercel.app/",
+    //   image: convertisseur,
+    //   stack: ["React", "Tailwind CSS"],
+    // },
   ];
 
   return (
