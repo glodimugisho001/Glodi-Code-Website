@@ -18,7 +18,7 @@ import todo from "../assets/todoapp.webp";
 import portfolio from "../assets/portfolio-glodi.webp";
 import LittleLemon from "../assets/littleLemon.webp";
 import quireact from "../assets/quizreact.webp";
-import ulpglblog from "../assets/ulpglblog.png"
+import ulpglblog from "../assets/ulpglblog.webp"
 
 export default function Projects() {
   const { t } = useTranslation();
