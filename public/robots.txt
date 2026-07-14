@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://glodi-code.vercel.app/sitemap.xml
