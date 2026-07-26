@@ -12,9 +12,8 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import convertisseur from "../assets/unit-converter.webp";
+import jobkivuai from "../assets/jobkivuai.png";
 import Blog from "../assets/ReactBlog.webp";
-import todo from "../assets/todoapp.webp";
 import portfolio from "../assets/portfolio-glodi.webp";
 import LittleLemon from "../assets/littleLemon.webp";
 import quireact from "../assets/quizreact.webp";
@@ -43,6 +42,16 @@ export default function Projects() {
       url: "https://ulpgl-blog.vercel.app/",
       image: ulpglblog,
       stack: ["Next js", "Tailwind CSS", "Prisma", "Postgresql", "Better Auth", "Tiptap"],
+    },
+    {
+      title: "JobKivu AI",
+      description: t(
+        "projects.jobkivu_ai",
+        "The smart platform connecting talent and companies in the Democratic Republic of the Congo.",
+      ),
+      url: "https://job-kivu-ai.vercel.app/",
+      image: jobkivuai,
+      stack: ["Next js", "React", "Tailwind CSS", "Convex", "Gemma AI"],
     },
     {
       title: "Little Lemon",
@@ -74,30 +83,10 @@ export default function Projects() {
       image: quireact,
       stack: ["React", "Tailwind CSS"],
     },
-    {
-      title: "Todo List",
-      description: t(
-        "projects.todo_desc",
-        "A todo list with a clean interface for managing tasks, powered by a full-stack backend.",
-      ),
-      url: "https://todo-app-three-gilt-20.vercel.app/",
-      image: todo,
-      stack: ["Next.js", "Tailwind CSS", "Prisma", "PostgreSQL"],
-    },
-    // {
-    //   title: "Unit Converter",
-    //   description: t(
-    //     "projects.converter_desc",
-    //     "A versatile unit converter that allows users to convert units of continuous quantities.",
-    //   ),
-    //   url: "https://convertisseur-unites-nine.vercel.app/",
-    //   image: convertisseur,
-    //   stack: ["React", "Tailwind CSS"],
-    // },
   ];
 
   return (
-    <div className="md:max-w-[1000px] md:mx-auto py-16">
+    <div className="md:max-w-250 md:mx-auto py-16">
       <motion.div
         className="text-center mb-10"
         initial={{ opacity: 0, y: 20 }}

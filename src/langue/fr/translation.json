@@ -56,11 +56,11 @@
       "visit": "Visiter le site",
       "portfolio_desc": "Mon propre site portfolio, conçu pour présenter mes projets, mes compétences et mon expérience.",
       "ulpglblg_desc": "Blog académique de l'Université Libre des Pays des Grands Lacs (Goma, RDC). Articles de recherche, actualités universitaires et ressources pour étudiants et enseignants.",
+      "jobkivu_ai": "La plateforme intelligente qui met en relation les talents et les entreprises en République démocratique du Congo.",
       "little_lemon_desc": "Application pour aider les gens à réserver une table au restaurant Little Lemon.",
       "blog_desc": "Un blog moderne et minimaliste conçu pour une publication et une lecture sans effort, avec une interface fluide et élégante.",
       "quiz_desc": "Une application de quiz simple avec une interface intuitive pour tester vos connaissances.",
-      "todo_desc": "Une liste de tâches avec une interface propre pour gérer les tâches, propulsée par un backend full-stack.",
-      "converter_desc": "Un convertisseur d'unités polyvalent qui permet aux utilisateurs de convertir des unités de quantités continues."
+      "todo_desc": "Une liste de tâches avec une interface propre pour gérer les tâches, propulsée par un backend full-stack."
     },
     "footer": {
       "description": "Un Développeur Full Stack passionné créant des expériences numériques modernes et efficaces.",
