@@ -6,7 +6,6 @@
     <link rel="canonical" href="https://glodi-code.vercel.app" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#111827" />
     <meta name="description" content="Portfolio de Glodi Mugisho, développeur React, Next.js et JavaScript. Découvrez mes projets web, mes compétences et mon parcours en développement frontend et full stack." />
     <meta name="keywords" content="Glodi Mugisho, Glodi Code, Full Stack Developer, Développeur Full Stack, React Developer, Frontend Developer, JavaScript, Next.js, Portfolio, Développeur Web RDC" />
     <meta name="author" content="Glodi Code" />
@@ -32,10 +31,11 @@
     <title>Glodi Code | Full Stack Developer</title>
 
     <!-- Structured Data JSON-LD -->
+     <!-- Son rôle est de décrire ton site et ton indentité aux moteurs de recherche et aux IA, -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
+      "@type": "Person", <!--c'est pour dire à l'IA que tu est une personne et là tu peux mettre  Organization ou WebSite,... -->
       "name": "Glodi Mugisho",
       "url": "https://glodi-code.vercel.app",
       "jobTitle": "Full Stack Developer",
@@ -46,6 +46,7 @@
       ]
     }
     </script>
+    <!--Sans les données structurées, Google peut parfois déduire ces informations, mais avec elles, tu les lui fournis de façon explicite, ce qui réduit les ambiguïtés.-->
   </head>
   <body>
     <div id="root"></div>
